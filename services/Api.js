@@ -11,7 +11,7 @@ const create = () => {
   // Create and configure an apisauce-based api object.
   //
 
-  const baseURL = 'http://dev.getscriba.io/api/v2/en/';
+  const baseURL = 'http://your_base_url.com/api';
 
   const api = apisauce.create({
     // base URL is read from the "constructor"
