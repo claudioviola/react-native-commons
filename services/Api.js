@@ -48,12 +48,8 @@ const create = () => {
 
   //idHash = 'claudioBrowserAND';
   //idKeyUser = '58a43e559e41c';
-  const apiStartup = (params) => api.get('api_startup', params);
-  const salvaInfoUtente = (params) => api.get('api_salva_info_utente', params);
-  const getHomeUtente = (params) => api.get('api_get_home_utente', params);
-  const uploadGcloud = (params) => api.get('api_upload_g_cloud', params);
-  const creaSalvaMomento = (params) => api.get('api_crea_salva_momento', params);
-  const getUserProfile = (params) => api.get('api_get_profilo_utente', params);
+  const apiName1 = (params) => api.get('api_name1', params);
+  const apiName2 = (params) => api.get('api_name2', params);
   // ------
   // STEP 3
   // ------
@@ -68,12 +64,8 @@ const create = () => {
   //
   return {
     // a list of the API functions from step 2
-    apiStartup,
-    salvaInfoUtente,
-    getHomeUtente,
-    creaSalvaMomento,
-    uploadGcloud,
-    getUserProfile
+    apiName1,
+    apiName2,
   }
 };
 
