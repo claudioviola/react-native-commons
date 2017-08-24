@@ -138,59 +138,5 @@ export function getRegionForCoordinates(location) {
 }
 
 
-/*
-export function getRegionForCoordinates(points) {
-    // points should be an array of { latitude: X, longitude: Y }
-    let minX, maxX, minY, maxY;
-
-    // init first point
-    ((point) => {
-        minX = point.latitude;
-        maxX = point.latitude;
-        minY = point.longitude;
-        maxY = point.longitude;
-    })(points[0]);
-
-    // calculate rect
-    points.map((point) => {
-        minX = Math.min(minX, point.latitude);
-        maxX = Math.max(maxX, point.latitude);
-        minY = Math.min(minY, point.longitude);
-        maxY = Math.max(maxY, point.longitude);
-    });
-
-    const midX = (minX + maxX) / 2;
-    const midY = (minY + maxY) / 2;
-    const deltaX = (maxX - minX);
-    const deltaY = (maxY - minY);
-
-    return {
-        latitude: midX,
-        longitude: midY,
-        latitudeDelta: deltaX,
-        longitudeDelta: deltaY
-    };
-}
-*/
-
-
-/* _updatePlaceWithCoords(coords){
- //https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=YOUR_API_KEY
- var latlng = {lat: parseFloat(this.state.coordinate.latitude), lng: parseFloat(this.state.coordinate.longitude)};
- request.open('GET', 'https://maps.googleapis.com/maps/api/geocode/json?' + Qs.stringify({
- location: latlng,
- language: 'en',
- }));
- }
-
- _updatePlaceWithPlaceId(placeId){
- request.open('GET', 'https://maps.googleapis.com/maps/api/place/details/json?' + Qs.stringify({
- key: this.props.query.key,
- placeid: rowData.place_id,
- language: this.props.query.language,
- }));
- }*/
-
-
 
 

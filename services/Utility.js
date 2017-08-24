@@ -67,53 +67,6 @@ export async function fixImageName(picture){
         })
 }
 
-
-/*
-
-export async function imageUpload(urlDestination, fileImage, fileName, today){
-    console.debug('makeUpload');
-    let contentType = getContentType(fileName);
-    let serverUrlRef = today + '/' + fileName;
-    let ft = new FileTransfer();
-    let uri = urlDestination;
-    let options = new FileUploadOptions();
-    options.httpMethod= 'PUT';
-    options.chunkedMode= false;
-    options.headers={'Content-Type':contentType};
-    options.mimeType='image/jpeg';
-    console.log(options);
-    ft.upload(fileImage, uri, (r)=>{
-        console.debug('upload success');
-        if(_currentSotrageKey){
-            FileManagerService.removeFile(_currentSotrageKey, fileImage).then( (rslt)=> {
-                q.resolve('/' + serverUrlRef);
-            },(e)=>{
-                console.error(e);
-                q.resolve('/' + serverUrlRef);
-            });
-        } else {
-            q.resolve('/' + serverUrlRef);
-        }
-    }, (e)=>{
-        console.error(e);
-        q.reject(e);
-    }, options);
-    return q.promise;
-};
-*/
-
-
-export async function getUrlUpload(idKeyUser, pic) {
-    const params= {
-        pic,
-        id_key_user: idKeyUser,
-        id_hash: getIdHash(),
-    };
-    const api = API.create();
-    const d = await api.uploadGcloud(params);
-    return d.data.url;
-};
-
 export function getToday() {
     let d = new Date();
     let month = d.getMonth()+1;
